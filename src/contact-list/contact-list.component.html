@@ -1,0 +1,6 @@
+<div *ngFor="let contact of contacts$ | async" class="contact">
+  <div>
+    <img class="profile" [src]="contact.sender.profileImage"/>
+  </div>
+  <div class="name" routerLink="/message/{{contact.id}}">{{contact.sender.name}}</div>
+</div>

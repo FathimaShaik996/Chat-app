@@ -1,0 +1,9 @@
+<div>ID: {{id}}</div>
+<div *ngFor="let details of message$ | async">
+  <div>Message : {{details.content}}</div>
+</div>
+
+<form [formGroup]="messagesForm">
+  <input type="text" formControlName="message" />
+  <button (click)="sendMessage()">Send</button>
+</form>
